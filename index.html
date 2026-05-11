@@ -1,1 +1,127 @@
-<!DOCTYPE html><html><head><title>RED-KI Content Manager</title></head><body><h1>RED-KI Content Manager</h1><p>Internal tool for managing AI-generated content posts to social media platforms.</p></body></html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RED-KI Content Manager</title>
+  <meta name="description" content="RED-KI Content Manager — privates Tool zur Verwaltung KI-generierter Inhalte für Social Media.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d0d0d; color: #e0e0e0; line-height: 1.7; }
+    .container { max-width: 920px; margin: 0 auto; padding: 60px 24px; }
+    header { text-align: center; padding-bottom: 50px; border-bottom: 1px solid #2a2a2a; margin-bottom: 50px; }
+    .logo { display: inline-flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+    .logo-box { width: 48px; height: 48px; background: linear-gradient(135deg, #c43838 0%, #800000 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 20px; font-family: 'JetBrains Mono', monospace; }
+    h1 { font-size: 36px; color: #fff; letter-spacing: -0.02em; }
+    .tagline { font-size: 17px; color: #aaa; margin-top: 12px; max-width: 580px; margin-left: auto; margin-right: auto; }
+    h2 { font-size: 22px; color: #fff; margin-top: 50px; margin-bottom: 18px; padding-bottom: 8px; border-bottom: 1px solid #2a2a2a; }
+    h3 { font-size: 16px; color: #ddd; margin-top: 18px; margin-bottom: 6px; }
+    p, li { font-size: 15px; color: #c0c0c0; margin-bottom: 10px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 24px; }
+    .feature { background: #161616; border: 1px solid #2a2a2a; border-radius: 8px; padding: 18px 20px; }
+    .feature h3 { color: #fff; font-size: 15px; margin-bottom: 6px; margin-top: 0; }
+    .feature p { font-size: 13.5px; color: #999; margin-bottom: 0; }
+    .icon { display: inline-block; width: 28px; height: 28px; background: #2a2a2a; border-radius: 5px; margin-bottom: 10px; line-height: 28px; text-align: center; color: #6cf; font-weight: 700; }
+    code { background: #1a1a1a; padding: 2px 6px; border-radius: 3px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; color: #ddd; }
+    .meta { background: #161616; border-left: 3px solid #6cf; padding: 16px 20px; margin: 18px 0; border-radius: 4px; }
+    .meta strong { color: #fff; }
+    a { color: #6cf; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ol { padding-left: 24px; }
+    .links { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 14px; }
+    .links a { background: #161616; border: 1px solid #2a2a2a; padding: 8px 16px; border-radius: 6px; color: #ddd; font-size: 14px; }
+    .links a:hover { background: #1a1a1a; text-decoration: none; border-color: #444; }
+    footer { margin-top: 70px; padding-top: 24px; border-top: 1px solid #2a2a2a; color: #666; font-size: 13px; text-align: center; }
+    footer a { color: #888; margin: 0 8px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="logo-box">R</div>
+      </div>
+      <h1>RED-KI Content Manager</h1>
+      <p class="tagline">Privates Tool zur Verwaltung KI-generierter Inhalte und ihrer Veröffentlichung auf Social-Media-Plattformen.</p>
+      <div class="links">
+        <a href="/red-ki-legal/privacy.html">Datenschutzerklärung</a>
+        <a href="/red-ki-legal/terms.html">Nutzungsbedingungen</a>
+      </div>
+    </header>
+
+    <h2>Über das Projekt</h2>
+    <p>RED-KI Content Manager ist eine selbst entwickelte, lokal installierte Anwendung, mit der ich (Emrah Keles) eigene Inhalte verwalte, die mit Hilfe von Künstlicher Intelligenz erstellt werden. Die Anwendung dient ausschließlich der privaten Nutzung; es werden keine Dienste oder Konten für externe Personen angeboten.</p>
+    <p>Die App kommuniziert über offizielle APIs mit Drittplattformen wie TikTok und YouTube, um auf meinen eigenen Accounts geplante Inhalte zu posten.</p>
+
+    <h2>Funktionen</h2>
+    <div class="grid">
+      <div class="feature">
+        <div class="icon">📅</div>
+        <h3>Planung &amp; Scheduling</h3>
+        <p>Zeitgesteuertes Veröffentlichen von Inhalten auf mehreren Plattformen.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🎨</div>
+        <h3>KI-Generierung</h3>
+        <p>Lokale Bild- und Textgenerierung mit eigener Hardware (ComfyUI, lokales LLM).</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🔄</div>
+        <h3>Multi-Plattform-API</h3>
+        <p>Native Integration mit TikTok Content Posting API und YouTube Data API v3.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🏷️</div>
+        <h3>KI-Kennzeichnung</h3>
+        <p>Automatisches Setzen der AI-Disclosure-Flags der jeweiligen Plattformen.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🔐</div>
+        <h3>OAuth-Authentifizierung</h3>
+        <p>Sichere Verbindung über OAuth 2.0 (mit PKCE), Token-Refresh und Sandbox-Modus.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🗄️</div>
+        <h3>Lokale Datenhaltung</h3>
+        <p>Alle Inhalte und Zugangsdaten werden lokal in einer PostgreSQL-Datenbank gespeichert. Keine Cloud-Synchronisation.</p>
+      </div>
+    </div>
+
+    <h2>So funktioniert es</h2>
+    <ol>
+      <li>Verbindung zu TikTok / YouTube über OAuth 2.0 (mit Sandbox-Modus für Tests)</li>
+      <li>KI-Inhalte werden lokal generiert oder importiert</li>
+      <li>Captions, Titel und Veröffentlichungszeitpunkt werden festgelegt</li>
+      <li>Ein interner Scheduler postet die Inhalte zum geplanten Zeitpunkt über die offiziellen APIs</li>
+      <li>Alle Posts werden mit den Disclosure-Mechanismen der jeweiligen Plattform als KI-generiert markiert</li>
+    </ol>
+
+    <h2>Impressum gemäß § 5 DDG</h2>
+    <div class="meta">
+      <strong>Emrah Keles</strong><br>
+      Am Neuerhof 5<br>
+      47804 Krefeld<br>
+      Deutschland<br>
+      E-Mail: <a href="mailto:emrah-keles@outlook.de">emrah-keles@outlook.de</a>
+    </div>
+    <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV: Emrah Keles (Anschrift wie oben).</p>
+
+    <h3>Haftungshinweis</h3>
+    <p>Trotz sorgfältiger inhaltlicher Kontrolle wird keine Haftung für die Inhalte externer Links übernommen. Für deren Inhalt sind ausschließlich die jeweiligen Betreiber verantwortlich.</p>
+
+    <h3>Urheberrecht</h3>
+    <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet.</p>
+
+    <h2>Kontakt</h2>
+    <p>Für rechtliche Anfragen, Datenschutzanliegen oder bei Fragen zur Anwendung erreichen Sie mich unter <a href="mailto:emrah-keles@outlook.de">emrah-keles@outlook.de</a>.</p>
+
+    <footer>
+      <p>
+        <a href="/red-ki-legal/privacy.html">Datenschutz</a> ·
+        <a href="/red-ki-legal/terms.html">Nutzungsbedingungen</a> ·
+        Stand: 11.05.2026
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
