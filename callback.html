@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>OAuth Callback Redirect</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OAuth Callback Redirect — RED-KI Content Manager</title>
+  <link rel="icon" type="image/x-icon" href="/red-ki-legal/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/red-ki-legal/red-ki_logo.png">
+  <link rel="shortcut icon" href="/red-ki-legal/favicon.ico">
 </head>
 <body>
   <p>Redirecting to local development server...</p>
-    <script>
-      // Parse all URL parameters from TikTok's redirect
-      const params = new URLSearchParams(window.location.search);
+  <script>
+    // Parse all URL parameters from TikTok's redirect
+    const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
     const state = params.get('state');
     const error = params.get('error');
@@ -20,11 +23,11 @@
 
     // Forward all parameters
     params.forEach((value, key) => {
-            localUrl.searchParams.set(key, value);
-});
+      localUrl.searchParams.set(key, value);
+    });
 
     // Redirect to local server
     window.location.href = localUrl.toString();
   </script>
-    </body>
-    </html>
+</body>
+</html>
